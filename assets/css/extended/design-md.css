@@ -1,0 +1,176 @@
+/* design.md aesthetic — Architectural Minimalism + Journalistic Gravitas */
+
+:root {
+    --theme: rgb(250, 249, 246);
+    --entry: rgb(255, 255, 255);
+    --primary: rgb(26, 26, 26);
+    --secondary: rgb(74, 74, 74);
+    --tertiary: rgb(180, 178, 170);
+    --content: rgb(26, 26, 26);
+    --border: rgb(229, 227, 220);
+    --code-bg: rgb(240, 238, 232);
+    --code-block-bg: rgb(26, 26, 26);
+    --accent: rgb(183, 58, 58);
+}
+
+:root[data-theme="dark"] {
+    --theme: rgb(26, 24, 23);
+    --entry: rgb(35, 33, 32);
+    --primary: rgb(245, 243, 238);
+    --secondary: rgb(196, 193, 186);
+    --tertiary: rgb(120, 117, 112);
+    --content: rgb(245, 243, 238);
+    --border: rgb(53, 50, 48);
+    --code-bg: rgb(42, 39, 37);
+    --accent: rgb(224, 112, 112);
+}
+
+body {
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    font-feature-settings: "ss01";
+}
+
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.entry-header h1,
+.entry-header h2,
+.entry-header h3,
+.site-title,
+.first-entry .entry-header h1 {
+    font-family: 'Space Grotesk', -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+a:hover,
+.post-entry .entry-header h2:hover,
+.post-title a:hover {
+    color: var(--accent);
+}
+
+.menu .active {
+    border-bottom-color: var(--accent);
+}
+
+.post-content blockquote {
+    border-inline-start: 2px solid var(--accent);
+    background: transparent;
+    padding: 0.25rem 1.25rem;
+    margin-inline-start: 0;
+    font-style: normal;
+    color: var(--secondary);
+}
+
+.post-content table {
+    border: none;
+    margin: 1.75rem 0;
+}
+
+.post-content table thead th {
+    border-bottom: 2px solid var(--primary);
+    background: transparent;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.78em;
+    color: var(--primary);
+    padding: 0.65rem 0.85rem;
+}
+
+.post-content table td,
+.post-content table th {
+    border-color: var(--border);
+    padding: 0.65rem 0.85rem;
+}
+
+.post-content table tbody tr:hover {
+    background: var(--code-bg);
+}
+
+.post-content ol > li,
+.post-content ul > li {
+    margin-bottom: 0.5rem;
+    line-height: 1.75;
+}
+
+.post-content {
+    font-size: 1.05rem;
+    line-height: 1.78;
+}
+
+.post-content h2 {
+    margin-top: 3rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content h3 {
+    margin-top: 2rem;
+}
+
+.post-content hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem auto;
+    width: 50%;
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.95em;
+    height: 0.95em;
+    color: var(--accent);
+    vertical-align: -0.12em;
+    margin-inline-end: 0.35em;
+}
+
+.icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.alert {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+    padding: 0.9rem 1.15rem;
+    border-inline-start: 2px solid var(--accent);
+    background: var(--code-bg);
+    margin: 1.5rem 0;
+    border-radius: 0;
+}
+
+.alert .icon {
+    flex-shrink: 0;
+    width: 1.25em;
+    height: 1.25em;
+    margin-inline-end: 0;
+    margin-top: 0.15em;
+}
+
+.alert-body {
+    color: var(--secondary);
+    line-height: 1.65;
+}
+
+.alert-body p:first-child {
+    margin-top: 0;
+}
+
+.alert-body p:last-child {
+    margin-bottom: 0;
+}
+
+.alert-body strong {
+    color: var(--primary);
+}
+
+.post-meta,
+.post-entry .entry-footer,
+.first-entry .entry-content {
+    font-family: 'Space Grotesk', sans-serif;
+}

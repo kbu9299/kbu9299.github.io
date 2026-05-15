@@ -1,0 +1,5 @@
+{{- $icon := .Get "icon" | default "lightbulb" -}}
+<aside class="alert">
+  {{- partial "svg-icon.html" $icon -}}
+  <div class="alert-body">{{ .Inner | markdownify }}</div>
+</aside>

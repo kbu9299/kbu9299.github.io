@@ -1,0 +1,49 @@
+baseURL = 'https://kbu9299.github.io/'
+languageCode = 'en-us'
+title = 'Adult English Speaking Club'
+theme = 'PaperMod'
+
+defaultContentLanguage = 'en'
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[params]
+  env = "production"
+  title = "Adult English Speaking Club"
+  description = "Group discussion notes and weekly agendas for our adult English speaking club."
+
+  defaultTheme = "auto"
+  disableThemeToggle = false
+
+  ShowReadingTime = false
+  ShowWordCount = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = false
+  ShowToc = false
+  comments = false
+  hidemeta = true
+  hideSummary = false
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+
+  mainSections = ["group-discussion"]
+
+  [params.homeInfoParams]
+    Title = "Adult English Speaking Club"
+    Content = "Weekly group discussion notes and agendas — bilingual readings, vocabulary, and conversation prompts."
+
+[[menu.main]]
+  name = "Group Discussion"
+  url = "/group-discussion/"
+  weight = 10
