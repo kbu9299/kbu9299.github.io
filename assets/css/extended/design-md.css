@@ -88,6 +88,63 @@ a:hover,
     background: var(--code-bg);
 }
 
+@media (max-width: 640px) {
+    .post-content table {
+        display: block;
+        margin: 1.25rem 0;
+        overflow: visible;
+    }
+
+    .post-content table thead {
+        display: none;
+    }
+
+    .post-content table tbody,
+    .post-content table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .post-content table tr {
+        border-bottom: 1px solid var(--border);
+        padding: 0.85rem 0;
+    }
+
+    .post-content table tr:first-child {
+        border-top: 1px solid var(--border);
+    }
+
+    .post-content table td {
+        display: block;
+        border: none;
+        padding: 0.15rem 0;
+    }
+
+    .post-content table td:first-child {
+        font-family: 'Space Grotesk', -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+        font-weight: 600;
+        font-size: 1.05em;
+        color: var(--primary);
+        margin-bottom: 0.2rem;
+    }
+
+    .post-content table td:nth-child(2) {
+        color: var(--accent);
+        font-size: 0.95em;
+        margin-bottom: 0.1rem;
+    }
+
+    .post-content table td:nth-child(3) {
+        color: var(--secondary);
+        font-size: 0.92em;
+        line-height: 1.6;
+    }
+
+    .post-content table tbody tr:hover {
+        background: transparent;
+    }
+}
+
 .post-content ol > li,
 .post-content ul > li {
     margin-bottom: 0.5rem;
